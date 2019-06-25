@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:text_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:ignore="NamespaceTypo">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="3dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+
+            <com.example.navigation.customcomponents.CircularImageView
+                android:id="@+id/home_activity_item_view_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:alpha="0.9"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/tomato" />
+
+            <RelativeLayout
+                android:id="@+id/layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/home_activity_item_view_image"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/topRelativeLayoout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.example.navigation.customcomponents.LatoTextView
+                        android:id="@+id/humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:baselineAligned="false"
+                        android:elevation="0dp"
+                        android:padding="3dp"
+                        android:text="Humidity"
+                        android:textSize="14sp"
+                        text_view:textStyle1="Bold" />
+
+                    <com.example.navigation.customcomponents.LatoTextView
+                        android:id="@+id/home_activity_item_view_humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/humidity"
+                        android:elevation="0dp"
+                        android:padding="3dp"
+                        android:text="Item View"
+                        android:textSize="14sp"
+                        text_view:textStyle1="Bold" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/bottomRelativeLayoout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/topRelativeLayoout">
+
+                    <com.example.navigation.customcomponents.LatoTextView
+                        android:id="@+id/tempeature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:baselineAligned="false"
+                        android:elevation="0dp"
+                        android:padding="3dp"
+                        android:text="Temperature"
+                        android:textSize="14sp"
+                        text_view:textStyle1="Bold" />
+
+                    <com.example.navigation.customcomponents.LatoTextView
+                        android:id="@+id/home_activity_item_view_temp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tempeature"
+                        android:elevation="0dp"
+                        android:padding="3dp"
+                        android:text="Item View"
+                        android:textSize="14sp"
+                        text_view:textStyle1="Bold" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bottomRelativeLayoout">
+
+
+                    <ImageView
+                        android:id="@+id/delete"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_toStartOf="@+id/edit"
+                        android:src="@drawable/cross" />
+
+
+                    <ImageView
+                        android:id="@+id/edit"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/update" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
